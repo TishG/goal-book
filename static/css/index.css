@@ -1,0 +1,7 @@
+html {
+  background: url(../img/mtn.jpg) no-repeat bottom center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

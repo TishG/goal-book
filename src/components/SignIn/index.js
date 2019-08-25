@@ -34,7 +34,7 @@ class SignInFormBase extends Component {
       .doSignInWithEmailAndPassword(email, password)
       .then(() => {
         this.setState({ ...INITIAL_STATE });
-        navigate(ROUTES.HOME);
+        navigate(ROUTES.USERPAGE);
       })
       .catch(error => {
         this.setState({ error });

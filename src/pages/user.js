@@ -1,20 +1,21 @@
 import React from 'react';
 import { compose } from 'recompose';
-
+import Navigation from '../components/navigation';
 import Layout from '../components/layout';
 import {
+  AuthUserContext,
   withAuthorization,
   withEmailVerification,
 } from '../components/Session';
-import Messages from '../components/Messages';
 
 const HomePageBase = () => (
-  <div>
-    <h1>Home Page</h1>
-    <p>The Home Page is accessible by every signed in user.</p>
-
-    <Messages />
-  </div>
+  <AuthUserContext.Consumer>
+    {authUser => (
+      <div>
+        <h1>Welcome {authUser.username}</h1>
+      </div>
+    )}
+  </AuthUserContext.Consumer>
 );
 
 const condition = authUser => !!authUser;
@@ -27,5 +28,6 @@ const HomePage = compose(
 export default () => (
   <Layout>
     <HomePage />
+    <Navigation />
   </Layout>
 );

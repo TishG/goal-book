@@ -7,19 +7,15 @@ import {
   withAuthorization,
   withEmailVerification,
 } from '../components/Session';
-import PasswordForgetForm from '../components/PasswordForget';
 import PasswordChangeForm from '../components/PasswordChange';
-import LoginManagement from '../components/LoginManagement';
 
 const AccountPageBase = () => (
   <Fragment>
     <AuthUserContext.Consumer>
       {authUser => (
         <div>
-          <h1>Account: {authUser.email}</h1>
-          <PasswordForgetForm />
+          <h1>User Account Page</h1>
           <PasswordChangeForm />
-          <LoginManagement authUser={authUser} />
         </div>
       )}
     </AuthUserContext.Consumer>
