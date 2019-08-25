@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import Layout from '../components/layout';
-import Navigation from '../components/navigation';
+import Navigation from '../components/Navigation';
 import css from '../../static/css/index.css';
 const LandingPage = () => (
   <Fragment>

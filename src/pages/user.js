@@ -1,6 +1,6 @@
 import React from 'react';
 import { compose } from 'recompose';
-import Navigation from '../components/navigation';
+import Navigation from '../components/Navigation';
 import Layout from '../components/layout';
 import {
   AuthUserContext,
